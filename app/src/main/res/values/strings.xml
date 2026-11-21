@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Piant</string>
+    <string name="parents_area">Elternbereich</string>
+    <string name="keep_painting">Weitermalen</string>
+    <string name="new_picture">Neues Bild</string>
+    <string name="save_picture">Speichern</string>
+    <string name="setting_sound">Töne</string>
+    <string name="setting_haptics">Vibration</string>
+    <string name="setting_palette">Farbleiste anzeigen</string>
+    <string name="pin">App anheften (Kindersicherung)</string>
+    <string name="unpin">Anheften beenden</string>
+    <string name="pin_hint">Angeheftet kann dein Kind Piant nicht verlassen. Lösen: „Zurück“ und „Übersicht“ gedrückt halten, bei Gestensteuerung nach oben wischen und halten.</string>
+    <string name="pin_failed">Anheften ging nicht. Aktiviere „App anheften“ in den Android-Einstellungen unter Sicherheit.</string>
+    <string name="exit">Piant beenden</string>
+    <string name="saved">Bild in der Galerie gespeichert 💖</string>
+    <string name="save_failed">Speichern hat leider nicht geklappt</string>
+</resources>
