@@ -19,7 +19,11 @@ Das Logo ist ein Farbklecks mit einem Herz in Pia-Pink (`#FF4F8B`) auf einem Pin
 
 ## Installieren
 
-Jeder Push baut die App über GitHub Actions. Die APK liegt als Artefakt `piant-apk` am jeweiligen Workflow-Lauf (Tab **Actions**). Bei einem Tag `v*` (z. B. `v1.0`) wird zusätzlich ein GitHub-Release mit der APK angelegt.
+**Neueste APK direkt aufs Handy:** https://github.com/Hakenadu/piant/releases/latest/download/piant.apk
+
+Am Handy im Browser öffnen, Download antippen und die Installation aus „unbekannten Quellen“ erlauben.
+
+Jeder Push baut die App über GitHub Actions (Artefakt `piant-apk` am Workflow-Lauf). Jeder Stand auf `main` wird automatisch als Release veröffentlicht.
 
 Hinweis: Die APK ist vorerst mit einem Debug-Schlüssel signiert, der bei jedem CI-Lauf neu entsteht. Für ein Update muss die alte Version deshalb erst deinstalliert werden. Für dauerhafte Updates einen eigenen Release-Keystore als Secret hinterlegen.
 

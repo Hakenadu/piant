@@ -33,8 +33,18 @@ jobs:
           name: piant-apk
           path: piant.apk
 
-      - name: Release anlegen (nur bei Tags v*)
+      - name: Release anlegen (bei Tags v*)
         if: startsWith(github.ref, 'refs/tags/v')
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh release create "$GITHUB_REF_NAME" piant.apk --title "Piant $GITHUB_REF_NAME" --generate-notes
+
+      # Jeder Stand auf main wird als Release veröffentlicht. Die aktuelle APK liegt damit immer unter
+      # https://github.com/Hakenadu/piant/releases/latest/download/piant.apk
+      - name: Release anlegen (main)
+        if: github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="v0.1.${GITHUB_RUN_NUMBER}"
+          gh release create "$TAG" piant.apk --target "$GITHUB_SHA" --title "Piant $TAG" --generate-notes --latest
