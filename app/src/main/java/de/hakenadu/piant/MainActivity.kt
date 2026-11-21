@@ -95,7 +95,7 @@ class MainActivity : ComponentActivity(), PaintView.Listener {
         setContentView(
             FrameLayout(this).apply {
                 addView(paintView, FrameLayout.LayoutParams(match, match))
-                addView(overlay, FrameLayout.LayoutParams(match, match))
+                addView(this@MainActivity.overlay, FrameLayout.LayoutParams(match, match))
             },
         )
 
